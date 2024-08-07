@@ -5,7 +5,7 @@ The driver is currently set to perturb the simulation and add a new, random rule
 # Rules
 Rules are what make the billiards complex. Each rule is a tuple (ball*vec, ball*vec). When an event occurs corresponding to the left hand side of the tuple, the right hand side is applied to the next movement buffer
 
-# Results and To-DO
+# To-DO
 With the current iteration, the system will eventually settle into a steady or periodic state where no more rules are created. 
 
 I am hoping to be able to create a chaotic system that never falls into a periodic state.
@@ -34,3 +34,8 @@ If you can follow that ridiculous scheme, it means:
 * Velocity is literally a mathematical translation from the current state to the next state
 * Moving from one state to the next is just an element-wise multiplication of the current state by the move buffer
 * Applying rules to get the next state is as simple as looking at the state transition (7*3 means ball 7 moves right), and if that event is a causal event, adding the effect event to the move_buffer
+
+# Some Results
+![Result 1](results/period_3.png)
+
+![Result 2](results/period_5.png)
